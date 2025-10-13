@@ -33,7 +33,7 @@ h1 {
 }
 
 .download-link {
-    display: none;
+    display: inline-block;
     background: white;
     color: #667eea;
     padding: 0.75rem 1.5rem;
@@ -96,10 +96,6 @@ embed {
     h1 {
         font-size: 1.75rem;
         margin-bottom: 0.75rem;
-    }
-
-    .download-link {
-        display: inline-block;
     }
 
     .pdf-container {
