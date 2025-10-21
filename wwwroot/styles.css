@@ -118,9 +118,17 @@ embed {
 .graphics-section h2 {
     color: white;
     font-size: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     text-align: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.graphics-subtitle {
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
 }
 
 .graphics-grid {
@@ -130,6 +138,17 @@ embed {
     width: 100%;
 }
 
+.graphics-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.graphics-link:hover {
+    transform: translateY(-5px);
+}
+
 .graphics-item {
     background: white;
     border-radius: 12px;
@@ -137,6 +156,12 @@ embed {
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    position: relative;
+    transition: box-shadow 0.3s ease;
+}
+
+.graphics-link:hover .graphics-item {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
 }
 
 .graphics-item h3 {
@@ -153,6 +178,33 @@ embed {
     height: 500px;
     border: none;
     display: block;
+    pointer-events: none;
+}
+
+.click-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(102, 126, 234, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+}
+
+.click-overlay span {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.graphics-link:hover .click-overlay {
+    opacity: 1;
 }
 
 @media (max-width: 1100px) {
@@ -170,11 +222,20 @@ embed {
 
     .graphics-section h2 {
         font-size: 1.75rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .graphics-subtitle {
+        font-size: 0.9rem;
         margin-bottom: 1.5rem;
     }
 
     .graphics-item iframe {
         height: 400px;
+    }
+
+    .click-overlay span {
+        font-size: 1.25rem;
     }
 }
 
@@ -186,6 +247,11 @@ embed {
 
     .graphics-section h2 {
         font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .graphics-subtitle {
+        font-size: 0.85rem;
         margin-bottom: 1rem;
     }
 
@@ -196,6 +262,10 @@ embed {
 
     .graphics-item iframe {
         height: 350px;
+    }
+
+    .click-overlay span {
+        font-size: 1.1rem;
     }
 }
 
