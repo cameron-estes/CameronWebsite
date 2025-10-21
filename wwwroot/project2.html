@@ -7,84 +7,45 @@
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
-            padding-top: 80px;
+            padding-top: 0;
         }
         .project-iframe {
             width: 100%;
-            height: calc(100vh - 80px);
+            height: 100vh;
             border: none;
             display: block;
         }
-        .project-nav {
+        .back-button-container {
             position: fixed;
-            top: 80px;
-            left: 0;
-            right: 0;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 1rem 2rem;
-            z-index: 999;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-        }
-        .project-nav-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .project-title {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: #333;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
         }
         .back-button {
-            background: #667eea;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 6px;
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
             text-decoration: none;
             font-weight: 500;
             transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
         }
         .back-button:hover {
-            background: #764ba2;
-            transform: translateY(-1px);
+            background: rgba(255, 255, 255, 1);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="index.html">Cameron Estes</a>
-            </div>
-            <div class="nav-menu" id="nav-menu">
-                <a href="index.html" class="nav-link">About</a>
-                <a href="resume.html" class="nav-link">Resume</a>
-                <a href="projects.html" class="nav-link">Projects</a>
-                <a href="contact.html" class="nav-link">Contact</a>
-            </div>
-            <div class="nav-toggle" id="nav-toggle">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Project Navigation -->
-    <div class="project-nav">
-        <div class="project-nav-content">
-            <div class="project-title">Physics Balls Simulator</div>
-            <a href="projects.html" class="back-button">← Back to Projects</a>
-        </div>
+    <!-- Simple Back Button -->
+    <div class="back-button-container">
+        <a href="projects.html" class="back-button">← Back to Projects</a>
     </div>
 
     <!-- Project Content -->
     <iframe src="dist2/index.html" title="Physics Balls Simulator" class="project-iframe"></iframe>
-
-    <script src="js/navigation.js"></script>
 </body>
 </html>
