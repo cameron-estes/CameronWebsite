@@ -3,78 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cameron's Website</title>
+    <title>About Me - Cameron Estes</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Cameron's Resume</h1>
-        <a href="Cameron_resume_91.pdf" download class="download-link">Download</a>
-        <div class="pdf-container">
-            <embed src="Cameron_resume_91.pdf#toolbar=0" type="application/pdf">
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">Cameron Estes</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link active">About</a>
+                <a href="resume.html" class="nav-link">Resume</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </div>
-    </div>
+    </nav>
 
-    <div class="graphics-section">
-        <h2>Some cool projects</h2>
-        <p class="graphics-subtitle">Click any project to view it fullscreen</p>
-        <div class="graphics-grid">
-            <a href="project1.html" class="graphics-link">
-                <div class="graphics-item">
-                    <h3>It's Raining!!</h3>
-                    <img src="thumbnails/ItsRaining.jpg" alt="Text Rain Animation" class="project-thumbnail">
-                    <div class="click-overlay">
-                        <span>Click to view fullscreen</span>
+    <!-- Main Content -->
+    <main>
+        <!-- About Section -->
+        <section class="page-section">
+            <div class="container">
+                <h1>About Me</h1>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Welcome to my portfolio! I'm Cameron Estes, a passionate developer and graphics programmer with a love for creating interactive visual experiences.</p>
+                        <p>I specialize in web development, computer graphics, and creating engaging user interfaces that bring ideas to life. Through my projects, I explore the intersection of technology and creativity, building everything from interactive animations to 3D visualizations.</p>
+                        <p>When I'm not coding, you can find me experimenting with new technologies, contributing to open-source projects, or exploring the latest trends in computer graphics and web development.</p>
+                    </div>
+                    <div class="about-skills">
+                        <h3>Skills & Technologies</h3>
+                        <div class="skills-grid">
+                            <div class="skill-category">
+                                <h4>Frontend Development</h4>
+                                <ul>
+                                    <li>HTML5 & CSS3</li>
+                                    <li>JavaScript & TypeScript</li>
+                                    <li>React & Vue.js</li>
+                                    <li>WebGL & Three.js</li>
+                                </ul>
+                            </div>
+                            <div class="skill-category">
+                                <h4>Graphics Programming</h4>
+                                <ul>
+                                    <li>OpenGL & WebGL</li>
+                                    <li>Shader Programming</li>
+                                    <li>3D Modeling & Animation</li>
+                                    <li>Computer Graphics Algorithms</li>
+                                </ul>
+                            </div>
+                            <div class="skill-category">
+                                <h4>Tools & Platforms</h4>
+                                <ul>
+                                    <li>Visual Studio Code</li>
+                                    <li>Git & GitHub</li>
+                                    <li>Node.js & npm</li>
+                                    <li>ASP.NET Core</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </a>
-            <a href="project2.html" class="graphics-link">
-                <div class="graphics-item">
-                    <h3>Physics Balls Simulator</h3>
-                    <img src="thumbnails/Physics.jpg" alt="3D Graphics Project" class="project-thumbnail">
-                    <div class="click-overlay">
-                        <span>Click to view fullscreen</span>
-                    </div>
-                </div>
-            </a>
-            <a href="project3.html" class="graphics-link">
-                <div class="graphics-item">
-                    <h3>Earthquake Mapper</h3>
-                    <img src="thumbnails/Earthquake.jpg" alt="Earth Visualization" class="project-thumbnail">
-                    <div class="click-overlay">
-                        <span>Click to view fullscreen</span>
-                    </div>
-                </div>
-            </a>
-            <a href="project4.html" class="graphics-link">
-                <div class="graphics-item">
-                    <h3>Dance Studio</h3>
-                    <img src="thumbnails/Dancing.jpg" alt="Character Animation" class="project-thumbnail">
-                    <div class="click-overlay">
-                        <span>Click to view fullscreen</span>
-                    </div>
-                </div>
-            </a>
-            <a href="project5.html" class="graphics-link">
-                <div class="graphics-item">
-                    <h3>3D Models & Textures</h3>
-                    <img src="thumbnails/LightStudio.jpg" alt="3D Models & Textures" class="project-thumbnail">
-                    <div class="click-overlay">
-                        <span>Click to view fullscreen</span>
-                    </div>
-                </div>
-            </a>
-            <a href="project6.html" class="graphics-link">
-                <div class="graphics-item">
-                    <h3>Toon World</h3>
-                    <img src="thumbnails/Doodle.jpg" alt="Toon Shading" class="project-thumbnail">
-                    <div class="click-overlay">
-                        <span>Click to view fullscreen</span>
-                    </div>
-                </div>
-            </a>
-        </div>
-    </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/navigation.js"></script>
 </body>
 </html>
-
